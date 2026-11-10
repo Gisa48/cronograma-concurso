@@ -10,7 +10,7 @@
 <style>
   :root{
     --ink:#141210; --soft:#6a615a; --line:#e4dcd3; --paper:#fdfbf8; --bg:#f4f0ea;
-    --accent:#0f5c4a; --accent-2:#e4f0eb; --accent-3:#0a3f33; --gold:#b8892f;
+    --accent:#8a6935; --accent-2:#f1e4c8; --accent-3:#5d4820; --gold:#b8892f;
     --serif:"Constantia","Cambria",Georgia,serif;
     --sans:"Corbel","Segoe UI",system-ui,Arial,sans-serif;
   }
@@ -50,10 +50,17 @@
   .mock .cardm{border:1px solid var(--line);border-radius:6px;padding:6px;text-align:center;font-size:9.5px;color:var(--soft)}
   .mock .cardm b{display:block;color:var(--accent);font-size:13px}
   /* blocos */
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:26px}
-  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px}
-  .card .n{font-family:var(--serif);font-size:15px;color:var(--accent);font-weight:700}
-  .card p{font-size:15px;margin:6px 0 0;color:var(--soft)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:28px}
+  .card{position:relative;background:#fffdf8;border:1px solid var(--line);border-radius:16px;padding:26px 24px 24px;
+    box-shadow:0 2px 10px rgba(42,35,24,.045);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(42,35,24,.10);border-color:#d8c9a8}
+  .card::before{content:"";position:absolute;left:24px;right:24px;top:0;height:3px;border-radius:0 0 3px 3px;
+    background:linear-gradient(90deg,var(--accent),#c9a35f)}
+  .card .n{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:40px;padding:0 10px;
+    border-radius:999px;background:var(--accent-2);color:var(--accent-3);font-family:var(--sans);font-size:12.5px;
+    font-weight:800;letter-spacing:.8px;margin-bottom:14px}
+  .card h3{font-family:var(--serif);font-size:21px;line-height:1.2;margin-bottom:8px;color:var(--ink)}
+  .card p{font-size:15px;margin:0;color:var(--soft);line-height:1.55}
   /* dor */
   .dor{background:#1b1a17;color:#efece6}
   .dor h2{color:#fff}
@@ -101,6 +108,8 @@
       <span class="tag">Sistema para concurseiro · funciona offline</span>
       <h1>Cronograma de estudos<br>para concurso — pronto em 5 minutos</h1>
       <p class="lead" style="font-family:var(--serif);font-size:23px;color:var(--ink);margin-bottom:10px">Você não tem falta de esforço. Tem falta de ordem.</p>
+      <p style="font-size:15px;color:var(--soft);max-width:560px;margin-bottom:14px">Não é aplicativo, não é planilha: é um <b>arquivo único</b> que abre no navegador e organiza seus estudos sozinho.</p>
+      <p class="lead" style="font-size:18px;color:var(--ink);max-width:560px"><b>Você não precisa se preocupar com a organização</b> — ela fica com o sistema. Foque no conteúdo, o resto deixa com ele.</p>
       <p class="lead">Digite o concurso e a data da prova. O sistema monta sua semana, controla o edital, agenda as revisões de 24h/7d/30d, registra seus erros e mostra exatamente quanto falta.</p>
       <a class="btn" href="#oferta">Quero meu cronograma</a>
       <p class="soft" style="margin-top:14px;font-size:14px">Sem login · sem mensalidade · roda no seu computador</p>
@@ -121,18 +130,6 @@
         <div class="mini">Raciocínio Lógico · 3,5h na semana</div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- DOR -->
-<section class="dor">
-  <div class="wrap">
-    <span class="kicker" style="color:#6fc3a8">Se você se identificar, o problema não é você</span>
-    <h2>Todo concurseiro já viveu isso</h2>
-    <div class="item"><b>Estuda 3 horas e não sabe se avançou</b>Lê, fecha o livro, e a sensação é de que nada ficou.</div>
-    <div class="item"><b>Não faz ideia de quanto do edital já cobriu</b>Passa um mês e você não consegue dizer "estou em 40%".</div>
-    <div class="item"><b>Falta um dia e o plano inteiro desmorona</b>"Hoje era constitucional" — e você perde a semana tentando compensar.</div>
-    <div class="item"><b>Estuda, mas esquece</b>Sem revisão programada, 70% do conteúdo some em duas semanas.</div>
   </div>
 </section>
 
@@ -157,6 +154,33 @@
   </div>
 </section>
 
+<!-- TEMAS -->
+<section style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <span class="kicker">feito para quem estuda por horas</span>
+    <h2 style="max-width:780px">Três temas — porque a vista cansa</h2>
+    <p class="soft" style="max-width:780px">Quem estuda por horas sente na vista. O sistema tem três temas, e cada um serve a um momento diferente do seu dia.</p>
+    <div class="cards">
+      <div class="card"><span class="n">☀ CLARO</span><h3>Vista descansada</h3><p>Para estudar de dia, com boa luz no ambiente. Contraste alto e leitura limpa.</p></div>
+      <div class="card"><span class="n">◐ NEUTRO (BEGE)</span><h3>O meio-termo</h3><p>Menos brilho que o claro, mais suave que o escuro. Para quem estuda muitas horas seguidas ou prefere um tom quente.</p></div>
+      <div class="card"><span class="n">● ESCURO</span><h3>Vista cansada</h3><p>Para a vista já cansada e para quem vai estudar mais um pouco à noite, com pouca luz no ambiente.</p></div>
+    </div>
+    <p style="margin-top:22px;font-size:15px;color:var(--soft)">A escolha fica salva: o sistema lembra o seu tema na próxima vez que você abrir.</p>
+  </div>
+</section>
+
+<!-- DOR -->
+<section class="dor">
+  <div class="wrap">
+    <span class="kicker" style="color:#6fc3a8">Se você se identificar, o problema não é você</span>
+    <h2>Todo concurseiro já viveu isso</h2>
+    <div class="item"><b>Estuda 3 horas e não sabe se avançou</b>Lê, fecha o livro, e a sensação é de que nada ficou.</div>
+    <div class="item"><b>Não faz ideia de quanto do edital já cobriu</b>Passa um mês e você não consegue dizer "estou em 40%".</div>
+    <div class="item"><b>Falta um dia e o plano inteiro desmorona</b>"Hoje era constitucional" — e você perde a semana tentando compensar.</div>
+    <div class="item"><b>Estuda, mas esquece</b>Sem revisão programada, 70% do conteúdo some em duas semanas.</div>
+  </div>
+</section>
+
 <!-- COMPARAÇÃO -->
 <section style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
@@ -174,6 +198,23 @@
     </table>
   </div>
 </section>
+
+
+<!-- BENEFÍCIOS -->
+<section style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <span class="kicker">o que você ganha de verdade</span>
+    <h2 style="max-width:760px">Tranquilidade mental, todos os dias</h2>
+    <p class="soft" style="max-width:760px">Cada parte da matéria estudada fica devidamente arrumada: o que já foi visto, o que está em revisão e o que falta. Nada solto na cabeça, nada esquecido numa gaveta.</p>
+    <div class="cards">
+      <div class="card"><span class="n">01</span><h3>Você só foca no conteúdo</h3><p>Organização, revisão e controle ficam com o sistema. Você abre, vê o que tem para hoje e estuda.</p></div>
+      <div class="card"><span class="n">02</span><h3>Cada hora no lugar certo</h3><p>O tempo vai para a matéria que mais pesa no edital e que mais te custa — não para a que você já domina.</p></div>
+      <div class="card"><span class="n">03</span><h3>Nada evapora</h3><p>Revisão automática em 24h, 7 dias e 30 dias. A curva do esquecimento trabalhando a seu favor.</p></div>
+      <div class="card"><span class="n">04</span><h3>Método com base</h3><p>Revisão espaçada, prática distribuída e recuperação ativa: três técnicas com décadas de pesquisa em aprendizagem.</p></div>
+    </div>
+  </div>
+</section>
+
 
 <!-- OFERTA -->
 <section id="oferta">
