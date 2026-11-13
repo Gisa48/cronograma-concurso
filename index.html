@@ -1,266 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cronograma de Estudos para Concurso — monte o seu em 5 minutos | R$ 97</title>
-<meta name="description" content="Sistema de cronograma de estudos para concurso: monta sua semana pela data da prova, controla o edital, agenda revisão 24h/7d/30d, caderno de erros e simulados. R$ 97, sem mensalidade.">
-<meta property="og:title" content="Cronograma de Estudos para Concurso — em 5 minutos">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cronograma de Estudos para Concurso: monte o seu em 5 minutos | R$ 97</title>
+<meta name="description" content="Cronograma de estudos para concurso que monta sua semana pela data da prova, controla o edital, agenda revisões de 24 h, 7 e 30 dias e guarda seu caderno de erros. Sem mensalidade, funciona offline.">
+<meta property="og:title" content="Cronograma de Estudos para Concurso: em 5 minutos">
 <meta property="og:description" content="Monte seu cronograma pela data da prova, controle o edital e as revisões. Sem login, sem mensalidade.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Product","name":"Cronograma de Estudos para Concurso","description":"Sistema que abre no navegador e monta o cronograma de estudos pela data da prova, com controle do edital, revisões em 24 h, 7 e 30 dias, caderno de erros e simulados.","brand":{"@type":"Brand","name":"Mayra Sterling Studio"},"offers":{"@type":"Offer","priceCurrency":"BRL","price":"97.00","availability":"https://schema.org/InStock","url":"https://pay.hotmart.com/D108429363L?off=703hzu0j"}},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Como montar um cronograma de estudos para concurso?","acceptedAnswer":{"@type":"Answer","text":"Defina a data da prova, as horas reais que você tem por dia e as matérias do edital. Distribua mais horas para o que pesa mais e para o que você tem mais dificuldade, reserve parte do tempo para revisão e confira o ritmo toda semana. O Cronograma de Estudos para Concurso faz essa distribuição por você."}},
+{"@type":"Question","name":"Quanto tempo de revisão devo reservar?","acceptedAnswer":{"@type":"Answer","text":"Uma prática comum é reservar cerca de 15% do tempo de estudo para revisão e rever cada assunto 24 horas, 7 dias e 30 dias depois. O sistema agenda essas revisões automaticamente."}},
+{"@type":"Question","name":"Funciona no celular?","acceptedAnswer":{"@type":"Answer","text":"É um arquivo que abre no navegador. Funciona melhor em computador ou tablet e também abre no celular."}},
+{"@type":"Question","name":"Garante aprovação no concurso?","acceptedAnswer":{"@type":"Answer","text":"Não. É uma ferramenta de organização. O resultado depende do seu estudo."}}]}]}
+</script>
 <style>
-  :root{
-    --ink:#141210; --soft:#6a615a; --line:#e4dcd3; --paper:#fdfbf8; --bg:#f4f0ea;
-    --accent:#8a6935; --accent-2:#f1e4c8; --accent-3:#5d4820; --gold:#b8892f;
-    --serif:"Constantia","Cambria",Georgia,serif;
-    --sans:"Corbel","Segoe UI",system-ui,Arial,sans-serif;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-  section{padding:64px 0}
-  h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.15;letter-spacing:-.4px}
-  h1{font-size:clamp(30px,5vw,50px)}
-  h2{font-size:clamp(24px,3.6vw,34px);margin-bottom:14px}
-  h3{font-size:19px;margin-bottom:6px}
-  p{margin-bottom:14px}
-  .soft{color:var(--soft)}
-  .kicker{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:12px}
-  .btn{display:inline-block;background:var(--accent);color:#fff;padding:17px 34px;border-radius:10px;
-    font-weight:700;font-size:17px;text-decoration:none;box-shadow:0 6px 18px rgba(15,92,74,.22);transition:transform .15s}
-  .btn:hover{transform:translateY(-2px)}
-  .btn.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:none}
-  /* hero */
-  .hero{background:
-      radial-gradient(90% 70% at 100% 0%, #eaf3ef 0%, transparent 55%),
-      linear-gradient(165deg,#fdfbf8 0%,#f2ebe2 100%);
-    padding:72px 0 64px;border-bottom:1px solid var(--line)}
-  .hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
-  .hero p.lead{font-size:19px;color:var(--soft);max-width:520px}
-  .tag{display:inline-block;background:var(--accent-2);color:var(--accent-3);font-size:12.5px;font-weight:700;
-    letter-spacing:.6px;padding:6px 12px;border-radius:20px;margin-bottom:16px}
-  /* mockup */
-  .mock{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 40px rgba(20,18,16,.10);
-    overflow:hidden;font-size:12px}
-  .mock .bar{display:flex;gap:6px;padding:10px 12px;background:#f7f3ee;border-bottom:1px solid var(--line)}
-  .mock .dot{width:9px;height:9px;border-radius:50%;background:#ddd4c9}
-  .mock .body{padding:14px}
-  .mock .mini{background:var(--accent-2);border-radius:6px;padding:7px 9px;margin-bottom:6px;color:var(--accent-3);font-weight:600}
-  .mock .mini.h{background:var(--accent);color:#fff}
-  .mock .rowmini{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin-bottom:10px}
-  .mock .cardm{border:1px solid var(--line);border-radius:6px;padding:6px;text-align:center;font-size:9.5px;color:var(--soft)}
-  .mock .cardm b{display:block;color:var(--accent);font-size:13px}
-  /* blocos */
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:28px}
-  .card{position:relative;background:#fffdf8;border:1px solid var(--line);border-radius:16px;padding:26px 24px 24px;
-    box-shadow:0 2px 10px rgba(42,35,24,.045);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
-  .card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(42,35,24,.10);border-color:#d8c9a8}
-  .card::before{content:"";position:absolute;left:24px;right:24px;top:0;height:3px;border-radius:0 0 3px 3px;
-    background:linear-gradient(90deg,var(--accent),#c9a35f)}
-  .card .n{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:40px;padding:0 10px;
-    border-radius:999px;background:var(--accent-2);color:var(--accent-3);font-family:var(--sans);font-size:12.5px;
-    font-weight:800;letter-spacing:.8px;margin-bottom:14px}
-  .card h3{font-family:var(--serif);font-size:21px;line-height:1.2;margin-bottom:8px;color:var(--ink)}
-  .card p{font-size:15px;margin:0;color:var(--soft);line-height:1.55}
-  /* dor */
-  .dor{background:#1b1a17;color:#efece6}
-  .dor h2{color:#fff}
-  .dor .item{border-left:3px solid var(--accent);padding-left:16px;margin-bottom:18px;color:#c9c4bb}
-  .dor .item b{color:#fff;display:block;font-size:17px}
-  /* comparação */
-  table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;font-size:15.5px}
-  th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line)}
-  th{background:#f7f3ee;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--soft)}
-  td.sim{color:var(--accent);font-weight:700}
-  td.nao{color:#b0a79e}
-  /* oferta */
-  .oferta{background:#fff;border:2px solid var(--accent);border-radius:16px;padding:38px;text-align:center;
-    max-width:640px;margin:0 auto;box-shadow:0 20px 50px rgba(15,92,74,.12)}
-  .preco{font-family:var(--serif);font-size:56px;color:var(--accent);line-height:1;margin:10px 0 4px}
-  .preco small{font-size:18px;color:var(--soft);font-family:var(--sans)}
-  .lista{list-style:none;text-align:left;max-width:400px;margin:22px auto;font-size:15.5px}
-  .lista li{padding:7px 0 7px 28px;position:relative}
-  .lista li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
-  .garantia{display:flex;gap:16px;align-items:center;background:var(--accent-2);border-radius:12px;padding:20px;margin-top:26px;text-align:left}
-  .garantia b{font-family:var(--serif);font-size:20px;color:var(--accent-3);display:block}
-  /* faq */
-  details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin-bottom:10px}
-  summary{font-weight:700;cursor:pointer;font-size:16px}
-  details p{margin:10px 0 0;color:var(--soft);font-size:15.5px}
-  footer{background:#141210;color:#9d968d;padding:36px 0;font-size:13.5px;text-align:center}
-  @media(max-width:820px){
-    section{padding:44px 0}
-    .hero .grid{grid-template-columns:1fr;gap:30px}
-    .mock .rowmini{grid-template-columns:repeat(3,1fr)}
-    .oferta{padding:26px}
-    .preco{font-size:44px}
-    table{font-size:14px}
-    th,td{padding:11px 12px}
-    .garantia{flex-direction:column;align-items:flex-start}
-  }
+:root{--teal:#0aa5b7;--dteal:#0b4e61;--coral:#ff6f59;--sun:#ffb524;--bg:#fffaf0;--ink:#12303a;--soft:#4f6a73;--line:#e8e0d0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+.w{max-width:900px;margin:0 auto;padding:0 18px}
+section{padding:34px 0}
+h1{font-size:clamp(28px,6.5vw,44px);line-height:1.12;margin:0 0 12px}
+h2{font-size:clamp(22px,5vw,30px);margin:0 0 14px;color:var(--dteal)}
+.hero{background:linear-gradient(160deg,var(--teal),#0b7f93);color:#fff;padding:40px 0 46px}
+.hero p{font-size:18px;margin:0 0 16px}
+.k{font-weight:700;letter-spacing:1px;font-size:13px}
+.btn{display:inline-block;background:var(--sun);color:var(--dteal);font-weight:800;text-decoration:none;padding:16px 26px;border-radius:16px;font-size:18px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.btn.coral{background:var(--coral);color:#fff}
+.small{font-size:14px;color:var(--soft)}.hero .small{color:#e2f7fa}
+.grid{display:grid;gap:12px}@media(min-width:700px){.c2{grid-template-columns:repeat(2,1fr)}.c3{grid-template-columns:repeat(3,1fr)}.hero .grid{grid-template-columns:1.2fr 1fr;align-items:center;gap:28px}.bar{display:none}}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}.card b{color:var(--dteal)}
+.mock{background:#fff;color:var(--ink);border-radius:18px;padding:14px;box-shadow:0 12px 30px rgba(0,0,0,.22)}
+.mock .t{font-weight:800;color:var(--dteal);margin-bottom:8px}
+.mock .r{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:8px}
+.mock .r div{background:var(--bg);border-radius:10px;padding:8px;text-align:center;font-size:12px;color:var(--soft)}.mock .r b{display:block;font-size:20px;color:var(--teal)}
+.mock .m{background:#e6f6f8;border-radius:10px;padding:9px 11px;margin-top:6px;font-size:13px}
+.vd{display:block;position:relative;max-width:300px;margin:0 auto;border-radius:20px;overflow:hidden;background:#0b4e61;aspect-ratio:9/16;text-decoration:none}
+.vd img{width:100%;height:100%;object-fit:cover;display:block;opacity:.9}
+.vd span{position:absolute;inset:auto 0 22px 0;text-align:center}
+.vd i{font-style:normal;display:inline-block;background:var(--sun);color:var(--dteal);font-weight:800;padding:12px 20px;border-radius:14px}
+ul.ck{list-style:none;padding:0;margin:0}ul.ck li{padding:8px 0 8px 30px;position:relative;border-bottom:1px solid var(--line)}
+ul.ck li:before{content:"✓";position:absolute;left:0;color:#1fa971;font-weight:800}
+.alt{background:#fff}
+table{width:100%;border-collapse:collapse;font-size:15px}th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left}th{color:var(--dteal)}.sim{color:#1fa971;font-weight:800}.nao{color:#c0463d}
+.price{background:#fff;border:2px solid var(--teal);border-radius:22px;padding:24px;text-align:center;max-width:560px;margin:0 auto}
+.price .pv{font-size:46px;font-weight:900;color:var(--dteal)}
+.price ul{text-align:left;margin:14px auto;max-width:360px}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:10px 0}summary{font-weight:700;cursor:pointer;color:var(--dteal)}
+footer{padding:28px 0 90px;font-size:13px;color:var(--soft);text-align:center;border-top:1px solid var(--line)}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 14px;text-align:center;z-index:5}
+.bar .btn{padding:12px 22px;font-size:16px;width:100%;max-width:420px}
 </style>
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap hero grid">
-    <div>
-      <span class="tag">Sistema para concurseiro · funciona offline</span>
-      <h1>Cronograma de estudos<br>para concurso — pronto em 5 minutos</h1>
-      <p class="lead" style="font-family:var(--serif);font-size:23px;color:var(--ink);margin-bottom:10px">Você não tem falta de esforço. Tem falta de ordem.</p>
-      <p style="font-size:15px;color:var(--soft);max-width:560px;margin-bottom:14px">Não é aplicativo, não é planilha: é um <b>arquivo único</b> que abre no navegador e organiza seus estudos sozinho.</p>
-      <p class="lead" style="font-size:18px;color:var(--ink);max-width:560px"><b>Você não precisa se preocupar com a organização</b> — ela fica com o sistema. Foque no conteúdo, o resto deixa com ele.</p>
-      <p class="lead">Informe o concurso, a data da prova e as horas que tem por dia (ou escolha o preenchimento da sua área). O sistema monta sua semana, controla o edital, agenda as revisões de 24h/7d/30d, registra seus erros e mostra exatamente quanto falta.</p>
-      <a class="btn" href="https://pay.hotmart.com/D108429363L?off=703hzu0j" target="_blank" rel="noopener">Quero meu cronograma</a>
-      <p class="soft" style="margin-top:14px;font-size:14px">Sem login · sem mensalidade · roda no seu computador</p>
-    </div>
-    <div class="mock" aria-hidden="true">
-      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-      <div class="body">
-        <div class="mini h">Técnico do INSS · prova 14/12</div>
-        <div class="rowmini">
-          <div class="cardm"><b>19h</b>semana</div>
-          <div class="cardm"><b>6</b>matérias</div>
-          <div class="cardm"><b>34</b>dias</div>
-          <div class="cardm"><b>76h</b>total</div>
-          <div class="cardm"><b>3h</b>revisão</div>
-        </div>
-        <div class="mini">Direito Administrativo · 4,7h na semana</div>
-        <div class="mini">Direito Constitucional · 4,7h na semana</div>
-        <div class="mini">Raciocínio Lógico · 3,5h na semana</div>
-      </div>
-    </div>
+<div class="hero"><div class="w"><div class="grid">
+  <div>
+    <div class="k">PARA QUEM ESTUDA PARA CONCURSO PÚBLICO</div>
+    <h1>Cronograma de estudos para concurso, pronto em 5 minutos.</h1>
+    <p><b>Você não tem falta de esforço. Tem falta de ordem.</b> Informe a data da prova e as horas que tem por dia, e o sistema monta a sua semana, controla o edital e agenda as revisões.</p>
+    <a class="btn" href="https://pay.hotmart.com/D108429363L?off=703hzu0j" target="_blank" rel="noopener" id="c1">Quero meu cronograma</a>
+    <p class="small" style="margin-top:12px">Sem login · sem mensalidade · funciona offline · garantia de 15 dias</p>
   </div>
-</section>
-
-<!-- O QUE É -->
-<section>
-  <div class="wrap">
-    <span class="kicker">O que é</span>
-    <h2>Cronograma de estudos para concurso: um sistema, não uma planilha</h2>
-    <p class="soft" style="max-width:680px">Planilha você preenche. Este sistema <b>calcula</b>: distribui suas horas por peso e dificuldade, reserva 15% para revisão, transforma domingo em dia de revisão e diz o ritmo necessário para cobrir o edital.</p>
-    <div class="cards">
-      <div class="card"><span class="n">01</span><h3>Planejamento</h3><p>Concurso, data, meta e horas reais por dia. Cinco presets por área.</p></div>
-      <div class="card"><span class="n">02</span><h3>Semana</h3><p>Blocos de 1h, sem repetir matéria em dois blocos seguidos.</p></div>
-      <div class="card"><span class="n">03</span><h3>Edital</h3><p>Tópicos com checkbox e o % do edital coberto.</p></div>
-      <div class="card"><span class="n">04</span><h3>Diário</h3><p>Horas, questões e acertos por matéria.</p></div>
-      <div class="card"><span class="n">05</span><h3>Revisões</h3><p>24h, 7 dias e 30 dias criadas automaticamente.</p></div>
-      <div class="card"><span class="n">06</span><h3>Erros</h3><p>Caderno de erros com o motivo real de cada um.</p></div>
-      <div class="card"><span class="n">07</span><h3>Simulados</h3><p>Nota, percentual e evolução em pontos.</p></div>
-      <div class="card"><span class="n">08</span><h3>Ciclo</h3><p>Fila de matérias: concluiu, vai para o fim.</p></div>
-      <div class="card"><span class="n">09</span><h3>Painel</h3><p>Diagnóstico: o que falta, seu ponto fraco, o ritmo.</p></div>
-      <div class="card"><span class="n">10</span><h3>Método</h3><p>O método em 4 partes, explicado dentro do sistema.</p></div>
-    </div>
+  <div class="mock" aria-hidden="true">
+    <div class="t">Técnico do INSS · prova em 34 dias</div>
+    <div class="r"><div><b>19h</b>por semana</div><div><b>6</b>matérias</div><div><b>34</b>dias</div></div>
+    <div class="m">Direito Administrativo · 4,7 h na semana</div>
+    <div class="m">Direito Constitucional · 4,7 h na semana</div>
+    <div class="m">Raciocínio Lógico · 3,5 h na semana</div>
   </div>
-</section>
+</div></div></div>
 
-<!-- TEMAS -->
-<section style="background:#fff;border-top:1px solid var(--line)">
-  <div class="wrap">
-    <span class="kicker">feito para quem estuda por horas</span>
-    <h2 style="max-width:780px">Três temas — porque a vista cansa</h2>
-    <p class="soft" style="max-width:780px">Quem estuda por horas sente na vista. O sistema tem três temas, e cada um serve a um momento diferente do seu dia.</p>
-    <div class="cards">
-      <div class="card"><span class="n">☀ CLARO</span><h3>Vista descansada</h3><p>Para estudar de dia, com boa luz no ambiente. Contraste alto e leitura limpa.</p></div>
-      <div class="card"><span class="n">◐ NEUTRO (BEGE)</span><h3>O meio-termo</h3><p>Menos brilho que o claro, mais suave que o escuro. Para quem estuda muitas horas seguidas ou prefere um tom quente.</p></div>
-      <div class="card"><span class="n">● ESCURO</span><h3>Vista cansada</h3><p>Para a vista já cansada e para quem vai estudar mais um pouco à noite, com pouca luz no ambiente.</p></div>
-    </div>
-    <p style="margin-top:22px;font-size:15px;color:var(--soft)">A escolha fica salva: o sistema lembra o seu tema na próxima vez que você abrir.</p>
+<section><div class="w">
+  <h2>Veja como funciona, em menos de 1 minuto</h2>
+  <a class="vd" href="https://www.youtube.com/shorts/FUsGr0J0Vao" target="_blank" rel="noopener" aria-label="Ver o vídeo no YouTube">
+    <img loading="lazy" src="https://img.youtube.com/vi/FUsGr0J0Vao/hqdefault.jpg" alt="Vídeo do Cronograma de Estudos para Concurso">
+    <span><i>▶ Assistir no YouTube</i></span>
+  </a>
+  <p class="small" style="text-align:center;margin-top:10px">Vídeo com pessoas geradas por inteligência artificial.</p>
+</div></section>
+
+<section class="alt"><div class="w">
+  <h2>Todo concurseiro já viveu isso</h2>
+  <div class="grid c2">
+    <div class="card"><b>Estuda 3 horas e não sabe se avançou.</b><br>Fecha o livro e a sensação é de que nada ficou.</div>
+    <div class="card"><b>Não sabe quanto do edital já cobriu.</b><br>Passa um mês e não consegue dizer “estou em 40%”.</div>
+    <div class="card"><b>Falta um dia e o plano desmorona.</b><br>Você perde a semana tentando compensar.</div>
+    <div class="card"><b>Estuda, mas esquece.</b><br>Sem revisão programada, o conteúdo some com o tempo.</div>
   </div>
-</section>
+</div></section>
 
-<!-- DOR -->
-<section class="dor">
-  <div class="wrap">
-    <span class="kicker" style="color:#6fc3a8">Se você se identificar, o problema não é você</span>
-    <h2>Todo concurseiro já viveu isso</h2>
-    <div class="item"><b>Estuda 3 horas e não sabe se avançou</b>Lê, fecha o livro, e a sensação é de que nada ficou.</div>
-    <div class="item"><b>Não faz ideia de quanto do edital já cobriu</b>Passa um mês e você não consegue dizer "estou em 40%".</div>
-    <div class="item"><b>Falta um dia e o plano inteiro desmorona</b>"Hoje era constitucional" — e você perde a semana tentando compensar.</div>
-    <div class="item"><b>Estuda, mas esquece</b>Sem revisão programada, o que você estudou vai sendo esquecido com o tempo.</div>
+<section><div class="w">
+  <h2>Um sistema que calcula, não uma planilha que você preenche</h2>
+  <p>Ele distribui as horas pelo peso e pela dificuldade de cada matéria, reserva 15% para revisão e mostra o ritmo necessário para cobrir o edital.</p>
+  <div class="grid c3">
+    <div class="card"><b>Planejamento</b><br>Concurso, data da prova e horas reais por dia, com modelos por área.</div>
+    <div class="card"><b>Semana</b><br>Blocos de 1 hora, sem repetir a mesma matéria em dois blocos seguidos.</div>
+    <div class="card"><b>Edital</b><br>Tópicos com caixa de seleção e o percentual do edital coberto.</div>
+    <div class="card"><b>Revisões</b><br>24 horas, 7 dias e 30 dias, criadas automaticamente.</div>
+    <div class="card"><b>Erros e simulados</b><br>Caderno de erros com o motivo de cada um e nota por simulado.</div>
+    <div class="card"><b>Painel</b><br>O que falta, o ponto fraco e o ritmo que você precisa manter.</div>
   </div>
-</section>
+</div></section>
 
-<!-- COMPARAÇÃO -->
-<section style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <span class="kicker">Por que não é planilha</span>
-    <h2>O que muda na prática</h2>
-    <table>
-      <tr><th>Recurso</th><th>Planilha / PDF</th><th>Cronograma do Concurseiro</th></tr>
-      <tr><td>Monta o cronograma sozinho pela data</td><td class="nao">você preenche</td><td class="sim">sim</td></tr>
-      <tr><td>% do edital coberto</td><td class="nao">não tem</td><td class="sim">sim</td></tr>
-      <tr><td>Revisão 24h / 7d / 30d automática</td><td class="nao">manual</td><td class="sim">sim</td></tr>
-      <tr><td>Caderno de erros e simulados juntos</td><td class="nao">arquivos separados</td><td class="sim">sim</td></tr>
-      <tr><td>Funciona offline, sem login</td><td class="nao">depende de nuvem</td><td class="sim">sim</td></tr>
-      <tr><td>Tema claro, claro-bege e escuro</td><td class="nao">não tem</td><td class="sim">sim</td></tr>
-      <tr><td>Mensalidade</td><td class="nao">—</td><td class="sim">nenhuma</td></tr>
-    </table>
+<section class="alt"><div class="w">
+  <h2>Três temas, porque a vista cansa</h2>
+  <p>Claro para o dia, bege para muitas horas seguidas e escuro para a noite. O sistema lembra a sua escolha.</p>
+  <h2 style="margin-top:26px">O que muda na prática</h2>
+  <table>
+    <tr><th>Recurso</th><th>Planilha ou PDF</th><th>Este cronograma</th></tr>
+    <tr><td>Monta pela data da prova</td><td class="nao">você preenche</td><td class="sim">sim</td></tr>
+    <tr><td>% do edital coberto</td><td class="nao">não tem</td><td class="sim">sim</td></tr>
+    <tr><td>Revisão 24 h / 7 d / 30 d</td><td class="nao">manual</td><td class="sim">automática</td></tr>
+    <tr><td>Erros e simulados juntos</td><td class="nao">separados</td><td class="sim">sim</td></tr>
+    <tr><td>Offline, sem login</td><td class="nao">depende de nuvem</td><td class="sim">sim</td></tr>
+    <tr><td>Mensalidade</td><td class="nao">varia</td><td class="sim">nenhuma</td></tr>
+  </table>
+</div></section>
+
+<section><div class="w">
+  <h2>O que você ganha de verdade</h2>
+  <ul class="ck">
+    <li><b>Foco no conteúdo.</b> Organização, revisão e controle ficam com o sistema.</li>
+    <li><b>Cada hora no lugar certo.</b> Mais tempo para o que pesa e para o que você tem mais dificuldade.</li>
+    <li><b>Nada fica para trás.</b> Cada estudo volta para revisão antes de ser esquecido.</li>
+    <li><b>Método conhecido.</b> Revisão espaçada, prática distribuída e recuperação ativa.</li>
+  </ul>
+</div></section>
+
+<section class="alt" id="oferta"><div class="w">
+  <div class="price">
+    <div class="small">Acesso imediato · pagamento único</div>
+    <div class="pv">R$ 97</div>
+    <div class="small">à vista ou em 12x</div>
+    <ul class="ck">
+      <li>Sistema com as 10 abas</li>
+      <li>Guia de uso em PDF</li>
+      <li>Exportação do seu histórico (CSV)</li>
+      <li>Impressão do cronograma em 1 folha</li>
+      <li>Atualizações da versão 1.x gratuitas</li>
+    </ul>
+    <a class="btn coral" href="https://pay.hotmart.com/D108429363L?off=703hzu0j" target="_blank" rel="noopener" id="c2">Quero garantir meu acesso</a>
+    <p class="small" style="margin-top:12px">🛡️ 15 dias de garantia: se não servir para a sua rotina, você pede o reembolso pela Hotmart.</p>
   </div>
-</section>
+</div></section>
 
+<section><div class="w">
+  <h2>Perguntas frequentes</h2>
+  <details open><summary>Como montar um cronograma de estudos para concurso?</summary><p>Defina a data da prova, as horas reais que você tem por dia e as matérias do edital. Dê mais horas ao que pesa mais e ao que é mais difícil para você, reserve tempo para revisão e confira o ritmo toda semana. O sistema faz essa distribuição por você.</p></details>
+  <details><summary>Quanto tempo reservar para revisão?</summary><p>Uma prática comum é cerca de 15% do tempo de estudo, revendo cada assunto 24 horas, 7 dias e 30 dias depois. O sistema agenda essas revisões.</p></details>
+  <details><summary>Preciso instalar algum programa?</summary><p>Não. É um arquivo que abre no navegador, sem login e sem internet depois de aberto.</p></details>
+  <details><summary>Funciona no celular?</summary><p>Funciona melhor em computador ou tablet e também abre no celular.</p></details>
+  <details><summary>Serve para qualquer concurso?</summary><p>Sim. Você informa o concurso e as matérias do seu edital. Há modelos de partida por área.</p></details>
+  <details><summary>Isso garante a minha aprovação?</summary><p>Não. É uma ferramenta de organização. O resultado depende do seu estudo.</p></details>
+</div></section>
 
-<!-- BENEFÍCIOS -->
-<section style="background:#fff;border-top:1px solid var(--line)">
-  <div class="wrap">
-    <span class="kicker">o que você ganha de verdade</span>
-    <h2 style="max-width:760px">Tranquilidade mental, todos os dias</h2>
-    <p class="soft" style="max-width:760px">Cada parte da matéria estudada fica devidamente arrumada: o que já foi visto, o que está em revisão e o que falta. Nada solto na cabeça, nada esquecido numa gaveta.</p>
-    <div class="cards">
-      <div class="card"><span class="n">01</span><h3>Você só foca no conteúdo</h3><p>Organização, revisão e controle ficam com o sistema. Você abre, vê o que tem para hoje e estuda.</p></div>
-      <div class="card"><span class="n">02</span><h3>Cada hora no lugar certo</h3><p>O tempo vai para a matéria que mais pesa no edital e que mais te custa — não para a que você já domina.</p></div>
-      <div class="card"><span class="n">03</span><h3>Nada fica para trás</h3><p>Revisões agendadas para 24h, 7 dias e 30 dias depois de cada estudo, para você rever a matéria antes de esquecer.</p></div>
-      <div class="card"><span class="n">04</span><h3>Método com base</h3><p>Revisão espaçada, prática distribuída e recuperação ativa: três técnicas de estudo bem conhecidas na psicologia da aprendizagem.</p></div>
-    </div>
-  </div>
-</section>
-
-
-<!-- OFERTA -->
-<section id="oferta">
-  <div class="wrap">
-    <div class="oferta">
-      <span class="kicker">Acesso imediato</span>
-      <h2 style="margin-bottom:6px">Cronograma do Concurseiro</h2>
-      <p class="soft" style="margin-bottom:0">Sistema completo + guia de uso em PDF</p>
-      <div class="preco">R$ 97<small> à vista ou 12x</small></div>
-      <ul class="lista">
-        <li>Sistema com as 10 abas</li>
-        <li>Guia de uso em PDF (10 páginas)</li>
-        <li>Exportação CSV do seu histórico</li>
-        <li>Impressão do cronograma em 1 folha</li>
-        <li>Atualizações da versão 1.x gratuitas</li>
-      </ul>
-      <a class="btn" href="https://pay.hotmart.com/D108429363L?off=703hzu0j" target="_blank" rel="noopener">Quero garantir meu acesso</a>
-      <div class="garantia">
-        <div style="font-size:34px;line-height:1">🛡️</div>
-        <div><b>15 dias de garantia</b>Se não servir para a sua rotina, você pede reembolso e devolvemos. Sem justificar.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section style="background:#fff;border-top:1px solid var(--line)">
-  <div class="wrap" style="max-width:820px">
-    <span class="kicker">Dúvidas</span>
-    <h2>Perguntas frequentes</h2>
-    <details open><summary>Serve como cronograma de estudos para concurso público?</summary><p>Sim. Ele foi feito para isso: você informa o concurso, a data da prova, suas horas por dia e as matérias do edital (com peso e dificuldade), ou escolhe o preenchimento automático da sua área. O sistema monta o cronograma da semana.</p></details>
-    <details><summary>Preciso instalar algo?</summary><p>Não. É um arquivo que abre no seu navegador (Chrome, Edge, Firefox). Clica duas vezes e funciona.</p></details>
-    <details><summary>Funciona no celular?</summary><p>Abre e dá para consultar o cronograma. Para montar e editar, o computador é melhor — a tela é maior.</p></details>
-    <details><summary>Serve para qualquer concurso?</summary><p>Sim, de qualquer área e nível. Você escolhe o preenchimento automático (Policial, Tribunais, Bancária, Fiscal, Administrativa) ou digita as matérias do seu edital. Ele não vem com o conteúdo de um edital específico: os tópicos do seu edital você acrescenta.</p></details>
-    <details><summary>Perco meus dados se limpar o navegador?</summary><p>Pode perder. Por isso existe o botão "Exportar CSV" — baixe uma vez por semana e você tem cópia de tudo.</p></details>
-    <details><summary>Alguém vê meus dados de estudo?</summary><p>Não. Nada sai do seu computador: não há login, servidor nem envio de informação.</p></details>
-    <details><summary>Isso garante que eu vou passar?</summary><p>Não, e ninguém pode prometer isso. É uma ferramenta de organização: ela não estuda por você, ela evita que você estude a coisa errada.</p></details>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    Cronograma do Concurseiro · Mayra Sterling Studio<br>
-    Material educacional. Não garante aprovação.
-  </div>
-</footer>
-
+<footer><div class="w">Mayra Sterling Studio · Material educacional de organização de estudos. Não garante aprovação em concurso.</div></footer>
+<div class="bar"><a class="btn" href="https://pay.hotmart.com/D108429363L?off=703hzu0j" target="_blank" rel="noopener" id="c3">Quero meu cronograma · R$ 97</a></div>
 </body>
 </html>
